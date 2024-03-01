@@ -1,0 +1,20 @@
+@font-face {
+  font-family: "Regular"; /*Can be any text*/
+  src: local("Poppins"),
+    url("./assets//fonts//poppins/Poppins-Regular.ttf") format("truetype");
+}
+
+::-webkit-scrollbar {
+
+  width: 2px;
+  height: 13px;
+}
+
+
+::-webkit-scrollbar-thumb {
+  margin-top: 10px;
+  background-color: #EA7C69;
+  border: 3px solid transparent;
+  border-radius: 9px;
+  background-clip: content-box;
+}

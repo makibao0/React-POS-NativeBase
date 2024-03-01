@@ -3,7 +3,9 @@ import ReactDOM from "react-dom";
 import App from "./App";
 import { NativeBaseProvider, extendTheme } from "native-base";
 import reportWebVitals from "./reportWebVitals";
-
+import { Provider } from "react-redux";
+import store from "./utils/redux/store";
+import "./App.css";
 const theme = extendTheme({
   config: {
     initialColorMode: "dark",
@@ -12,9 +14,11 @@ const theme = extendTheme({
 
 ReactDOM.render(
   <React.StrictMode>
-    <NativeBaseProvider theme={theme}>
-      <App />
-    </NativeBaseProvider>
+    <Provider store={store}>
+      <NativeBaseProvider theme={theme}>
+        <App />
+      </NativeBaseProvider>
+    </Provider>
   </React.StrictMode>,
   document.getElementById("root")
 );
